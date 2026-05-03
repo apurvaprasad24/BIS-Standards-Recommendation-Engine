@@ -1,11 +1,3 @@
-"""
-inference.py — BIS Standards Recommendation Engine
-Entry point for hackathon evaluation.
-
-Usage:
-    python inference.py --input hidden_private_dataset.json --output team_results.json
-"""
-
 import argparse
 import json
 import sys
