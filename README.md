@@ -83,10 +83,10 @@ python app.py
 ## 📁 Repository Structure
 
 ```
-├── inference.py          # 🔴 Entry point for judge evaluation
-├── setup.py              # One-command PDF parsing + index build
+├── inference.py         
+├── setup.py              # parsing + index build
 ├── app.py                # Flask web UI
-├── eval_script.py        # Organizer-provided evaluation script
+├── eval_script.py        # evaluation script
 ├── requirements.txt      # Dependencies
 ├── README.md             # This file
 ├── src/
@@ -97,8 +97,8 @@ python app.py
     ├── dataset.pdf        # BIS SP 21 source document
     ├── public_test_set.json
     ├── results_v2.json    # Public test set results
-    └── chunks.pkl         # Parsed standard chunks (generated)
-    └── retriever.pkl      # Built retrieval index (generated)
+    └── chunks.pkl         # Parsed standard chunks
+    └── retriever.pkl      # Built retrieval index 
 ```
 
 ---
@@ -118,12 +118,6 @@ python app.py
 4. Score normalization + hybrid fusion
 5. IS-number exact match boosting (+0.3 for numeric match)
 6. Deduplication and top-K selection
-
-### Optional LLM Layer
-- Claude Sonnet 4 re-ranks retrieved candidates via Anthropic API
-- Prevents hallucinations: model is explicitly restricted to provided candidate list
-- Improves rationale quality for MSE stakeholders
-
 ---
 
 ## 🎯 Impact on MSEs
